@@ -14,6 +14,7 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'foundation-rails', '5.4.5'
 gem 'devise'
+gem 'bcrypt', platforms: :ruby
 gem 'simple_form'
 gem 'jquery-rails'
 
