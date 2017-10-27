@@ -30,11 +30,15 @@ class PokemonController < ApplicationController
 
 		if pokemon.save
 			redirect_to trainer_path(current_trainer)
+			#simple_form_for pokemon, :url => trainer_path(current_trainer)
 		else
-			flash[:error] = "Invalid Pokemon name"
+			#flash[:error] = "Invalid Pokemon name"
+			flash[:error] = pokemon.errors.full_messages.to_sentence
 			redirect_to new_pokemon_path(current_trainer)
+			#simple_form_for @pokemon, :url => trainer_path
+			#simple_form_for pokemon, url: new_pokemon_path(current_trainer), method: :patch do |f|
+			#end
 		end
-
 
 	end
 
